@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Faculty Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- Header -->
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Faculty Dashboard
+                </h1>
+
+                <p>
+                    Student Management System
+                </p>
+
+            </div>
+
+            <button
+                id="logoutBtn"
+                class="btn logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- Add Student -->
+
+        <div class="profile-card">
+
+            <h2>
+                Add Student
+            </h2>
+
+            <form id="studentForm">
+
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Student email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentCourse">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentCourse"
+                        placeholder="Example: CSE"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentYear">
+                        Year
+                    </label>
+
+                    <input
+                        type="number"
+                        id="studentYear"
+                        min="1"
+                        max="5"
+                        placeholder="1 - 5"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentPassword">
+                        Login Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="studentPassword"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Create Student Account
+                </button>
+
+            </form>
+
+            <p id="studentMessage"></p>
+
+        </div>
+
+
+        <!-- Edit Student -->
+
+        <div
+            id="editCard"
+            class="profile-card"
+            style="display: none;"
+        >
+
+            <h2>
+                Edit Student
+            </h2>
+
+            <form id="editStudentForm">
+
+
+                <input
+                    type="hidden"
+                    id="editStudentId"
+                >
+
+
+                <div class="form-group">
+
+                    <label for="editStudentName">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editStudentName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editStudentEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="editStudentEmail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editStudentCourse">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editStudentCourse"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editStudentYear">
+                        Year
+                    </label>
+
+                    <input
+                        type="number"
+                        id="editStudentYear"
+                        min="1"
+                        max="5"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        Save Changes
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEditBtn"
+                        class="btn cancel-btn"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="editMessage"></p>
+
+        </div>
+
+
+        <!-- Students -->
+
+        <div class="profile-card">
+
+            <h2>
+                Students
+            </h2>
+
+            <div id="studentsContainer">
+                Loading students...
+            </div>
+
+        </div>
+
+
+        <!-- Mark Attendance -->
+
+        <div class="profile-card">
+
+            <h2>
+                Mark Attendance
+            </h2>
+
+            <form id="attendanceForm">
+
+
+                <div class="form-group">
+
+                    <label for="attendanceStudent">
+                        Student
+                    </label>
+
+                    <select
+                        id="attendanceStudent"
+                        required
+                    >
+
+                        <option value="">
+                            Select student
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="attendanceDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="attendanceDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="attendanceStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="attendanceStatus"
+                        required
+                    >
+
+                        <option value="present">
+                            Present
+                        </option>
+
+                        <option value="absent">
+                            Absent
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Mark Attendance
+                </button>
+
+            </form>
+
+            <p id="attendanceMessage"></p>
+
+        </div>
+
+
+        <!-- Attendance Update -->
+
+        <div class="profile-card">
+
+            <h2>
+                Update Attendance
+            </h2>
+
+            <p>
+                Select a student to view their attendance records.
+                Faculty can update the attendance status or date.
+            </p>
+
+
+            <div class="form-group">
+
+                <label for="updateAttendanceStudent">
+                    Student
+                </label>
+
+                <select
+                    id="updateAttendanceStudent"
+                >
+
+                    <option value="">
+                        Select student
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="attendanceRecordsContainer">
+
+                <p>
+                    Select a student to load attendance records.
+                </p>
+
+            </div>
+
+
+            <p id="updateAttendanceMessage"></p>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="js/faculty-dashboard.js"></script>
+
+</body>
+
+</html>

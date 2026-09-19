@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Management System - Login</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>
+                Student Management System 🎓
+            </h1>
+
+            <p class="subtitle">
+                Login to your account
+            </p>
+
+
+            <!-- Login Type -->
+
+            <div
+                style="
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                "
+            >
+
+                <button
+                    type="button"
+                    id="studentLoginBtn"
+                    class="btn"
+                    style="
+                        flex: 1;
+                        background: #2563eb;
+                    "
+                >
+                    👨‍🎓 Student
+                </button>
+
+
+                <button
+                    type="button"
+                    id="facultyLoginBtn"
+                    class="btn"
+                    style="
+                        flex: 1;
+                        background: #6b7280;
+                    "
+                >
+                    👩‍🏫 Faculty
+                </button>
+
+            </div>
+
+
+            <p
+                id="loginTypeMessage"
+                style="
+                    text-align: center;
+                    margin-bottom: 20px;
+                    color: #1e3a8a;
+                    font-weight: 600;
+                "
+            >
+                Student Login 👨‍🎓
+            </p>
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                    style="width: 100%;"
+                >
+                    Login 🔐
+                </button>
+
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <!-- Registration Links -->
+
+            <div
+                style="
+                    margin-top: 25px;
+                    text-align: center;
+                "
+            >
+
+                <p
+                    style="
+                        color: #6b7280;
+                        margin-bottom: 12px;
+                    "
+                >
+                    Don't have an account?
+                </p>
+
+
+                <a
+                    href="register.html?role=student"
+                    class="btn"
+                    style="
+                        display: block;
+                        text-decoration: none;
+                        margin-bottom: 10px;
+                        background: #6b7280;
+                    "
+                >
+                    Register as Student 📝
+                </a>
+
+
+                <a
+                    href="register.html?role=faculty"
+                    class="btn"
+                    style="
+                        display: block;
+                        text-decoration: none;
+                        background: #374151;
+                    "
+                >
+                    Register as Faculty 👩‍🏫
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

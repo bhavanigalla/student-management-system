@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Student Management System - Register
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1 id="registerTitle">
+                Student Registration 👨‍🎓
+            </h1>
+
+            <p
+                id="registerSubtitle"
+                class="subtitle"
+            >
+                Create your student account
+            </p>
+
+
+            <form id="registerForm">
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Student Fields -->
+
+                <div id="studentFields">
+
+
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course
+                        </label>
+
+                        <input
+                            type="text"
+                            id="course"
+                            placeholder="Example: CSE"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="year">
+                            Year
+                        </label>
+
+                        <input
+                            type="number"
+                            id="year"
+                            min="1"
+                            max="5"
+                            placeholder="1 - 5"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Re-enter your password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                    style="width: 100%;"
+                >
+                    Create Account 📝
+                </button>
+
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <p
+                style="
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #6b7280;
+                "
+            >
+                Already have an account?
+            </p>
+
+
+            <a
+                href="index.html"
+                class="btn"
+                style="
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    background: #6b7280;
+                "
+            >
+                Back to Login 🔐
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>
